@@ -11,8 +11,8 @@ render : (Int, Int) -> Html
 render (x, y) =
   div [ coordContainer ]
     [
-      div [ coord ] [ text <| prependCoord "x" x ],
-      div [ coord ] [ text <| prependCoord "y" y ]
+      div [ coord ] [ text <| prependCoord "x" x ]
+    , div [ coord ] [ text <| prependCoord "y" y ]
     ]
 
 prependCoord : String -> Int -> String
@@ -26,9 +26,9 @@ appendUnit val =
 coordContainer : Attribute
 coordContainer =
   style
-    [ ("text-align", "center")
-    , ("font-size", "24pt")
-    , ("padding", "50px")
+    [ ("text-align", "center"),
+      ("font-size", "24pt"),
+      ("padding", "50px")
     ]
 
 coord : Attribute
